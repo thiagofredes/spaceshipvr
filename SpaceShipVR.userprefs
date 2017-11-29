@@ -1,9 +1,11 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\ShipController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\ShipShootingController.cs">
     <Files>
-      <File FileName="Assets\Scripts\ThirdPersonCameraFollower.cs" Line="39" Column="82" />
-      <File FileName="Assets\Scripts\ShipController.cs" Line="14" Column="169" />
+      <File FileName="Assets\Scripts\ShipShootingController.cs" Line="31" Column="41" />
+      <File FileName="Assets\Scripts\BeamController.cs" Line="17" Column="29" />
+      <File FileName="Assets\Scripts\SightInteractions\ISightInteraction.cs" Line="11" Column="21" />
+      <File FileName="Assets\Scripts\SightInteractableObject.cs" Line="34" Column="20" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -20,8 +20,6 @@ public class ThirdPersonCameraFollower : MonoBehaviour
 
 	public float followDistance;
 
-	public float followDamping;
-
 	private Vector3 orbit;
 
 	private static ThirdPersonCameraFollower _instance;
@@ -37,6 +35,6 @@ public class ThirdPersonCameraFollower : MonoBehaviour
 	{
 		Vector3 velocity = Vector3.zero;
 		Vector3 newPosition = followObject.transform.position + orbit * followDistance;
-		this.transform.position = Vector3.SmoothDamp (this.transform.position, newPosition, ref velocity, followDamping);
+		this.transform.position = newPosition;
 	}
 }

@@ -51,6 +51,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\3rd Party\Sci-fi Tower\Scripts\ChangeTurretMaterial.cs" />
+     <Compile Include="Assets\3rd Party\Sci-fi Tower\Scripts\RotationData.cs" />
+     <Compile Include="Assets\3rd Party\Sci-fi Tower\Scripts\SimpleMovement.cs" />
+     <Compile Include="Assets\3rd Party\Sci-fi Tower\Scripts\TurretRotation.cs" />
      <Compile Include="Assets\GoogleVR\Demos\Scripts\DemoInputManager.cs" />
      <Compile Include="Assets\GoogleVR\Demos\Scripts\DemoSceneManager.cs" />
      <Compile Include="Assets\GoogleVR\Demos\Scripts\GVRDemo\GVRDemoManager.cs" />
@@ -154,8 +158,12 @@
      <Compile Include="Assets\GoogleVR\Scripts\Utilities\GvrUIHelpers.cs" />
      <Compile Include="Assets\GoogleVR\Scripts\Utilities\GvrVRHelpers.cs" />
      <Compile Include="Assets\GoogleVR\Scripts\Video\GvrVideoPlayerTexture.cs" />
+     <Compile Include="Assets\Scripts\BeamController.cs" />
      <Compile Include="Assets\Scripts\Extensions\AngleUtilities.cs" />
-     <Compile Include="Assets\Scripts\ShipController.cs" />
+     <Compile Include="Assets\Scripts\ShipNavigationController.cs" />
+     <Compile Include="Assets\Scripts\ShipShootingController.cs" />
+     <Compile Include="Assets\Scripts\SightInteractableObject.cs" />
+     <Compile Include="Assets\Scripts\SightInteractions\ISightInteraction.cs" />
      <Compile Include="Assets\Scripts\ThirdPersonCameraFollower.cs" />
      <None Include="Assets\GoogleVR\Shaders\GvrUIOverlayFont.shader" />
      <None Include="Assets\GoogleVR\Shaders\GvrAdditiveOverlay.shader" />
