@@ -158,6 +158,7 @@
      <Compile Include="Assets\GoogleVR\Scripts\Utilities\GvrUIHelpers.cs" />
      <Compile Include="Assets\GoogleVR\Scripts\Utilities\GvrVRHelpers.cs" />
      <Compile Include="Assets\GoogleVR\Scripts\Video\GvrVideoPlayerTexture.cs" />
+     <Compile Include="Assets\Scripts\AimTextureToggle.cs" />
      <Compile Include="Assets\Scripts\BeamController.cs" />
      <Compile Include="Assets\Scripts\Extensions\AngleUtilities.cs" />
      <Compile Include="Assets\Scripts\ShipNavigationController.cs" />
