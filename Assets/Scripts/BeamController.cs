@@ -9,7 +9,7 @@ public class BeamController : MonoBehaviour
 
 	void Update ()
 	{
-		this.transform.Translate (this.transform.forward * Time.deltaTime * speed);
+		this.transform.Translate (this.transform.forward * Time.deltaTime * speed, Space.World);
 	}
 
 	void OnTriggerEnter (Collider other)

@@ -9,6 +9,10 @@ public class ShipShootingController : MonoBehaviour
 
 	public Transform shotOrigin;
 
+	public GameObject aimSprite;
+
+	public float baseAimDistance = 20f;
+
 	private ISightInteraction currentObject;
 
 
@@ -26,8 +30,10 @@ public class ShipShootingController : MonoBehaviour
 	{
 		RaycastHit hit;
 
-		if (Physics.Raycast (shotOrigin.transform.position, shotOrigin.transform.forward, out hit, Mathf.Infinity, ~LayerMask.GetMask ("Player", "PlayerBullet"))) {
+		if (Physics.Raycast (shotOrigin.transform.position, shotOrigin.transform.forward, out hit, baseAimDistance, ~LayerMask.GetMask ("Player", "PlayerBullet"))) {
 			ISightInteraction interactableObject = hit.collider.GetComponent<ISightInteraction> ();
+			aimSprite.transform.position = hit.point + hit.normal * 0.15f;
+			aimSprite.transform.forward = hit.normal;
 			if (interactableObject != null) {				
 				if (currentObject == null) {
 					currentObject = interactableObject;
@@ -45,6 +51,8 @@ public class ShipShootingController : MonoBehaviour
 				currentObject = null;
 			}
 		} else {
+			aimSprite.transform.position = shotOrigin.transform.position + shotOrigin.transform.forward * baseAimDistance;
+			aimSprite.transform.forward = -shotOrigin.transform.forward;
 			currentObject = null;
 		}
 	}
