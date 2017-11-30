@@ -160,6 +160,7 @@
      <Compile Include="Assets\GoogleVR\Scripts\Video\GvrVideoPlayerTexture.cs" />
      <Compile Include="Assets\Scripts\AimTextureToggle.cs" />
      <Compile Include="Assets\Scripts\BeamController.cs" />
+     <Compile Include="Assets\Scripts\Enemy.cs" />
      <Compile Include="Assets\Scripts\Extensions\AngleUtilities.cs" />
      <Compile Include="Assets\Scripts\ShipNavigationController.cs" />
      <Compile Include="Assets\Scripts\ShipShootingController.cs" />
