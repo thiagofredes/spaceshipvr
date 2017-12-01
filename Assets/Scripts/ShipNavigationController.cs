@@ -6,23 +6,14 @@ public class ShipNavigationController : MonoBehaviour
 {
 	public float speed;
 
-	public float rotationSpeed;
-
-	public float rotationMultiplier;
-
-	public float rotationMaxAngle = 60f;
+	public float lookDamp = 0.1f;
 
 	// Update is called once per frame
 	void Update ()
 	{
-		Quaternion newForward = Quaternion.LookRotation (ThirdPersonCameraFollower.CameraForward);
-		Vector3 newForwardEulerAngles = newForward.eulerAngles;
-		newForwardEulerAngles.x = AngleUtilities.ClampRangeSymDeg (newForwardEulerAngles.x, 180f);
-		newForwardEulerAngles.y = AngleUtilities.ClampRangeSymDeg (newForwardEulerAngles.y, 180f);
-		newForwardEulerAngles.x = Mathf.Clamp (newForwardEulerAngles.x * rotationMultiplier, -rotationMaxAngle, rotationMaxAngle);
-		newForwardEulerAngles.y = Mathf.Clamp (newForwardEulerAngles.y * rotationMultiplier, -rotationMaxAngle, rotationMaxAngle);
-		newForward.eulerAngles = newForwardEulerAngles;
-		this.transform.rotation = Quaternion.Slerp (this.transform.rotation, newForward, Time.deltaTime * rotationSpeed);
+		Vector3 dampSpeed = Vector3.zero;
+		Quaternion newForward = Quaternion.LookRotation (Vector3.SmoothDamp (this.transform.forward, ThirdPersonCameraFollower.CameraForward, ref dampSpeed, lookDamp));
+		this.transform.rotation = newForward;
 		this.transform.Translate (this.transform.forward * speed * Time.deltaTime, Space.World);
 	}
 }
